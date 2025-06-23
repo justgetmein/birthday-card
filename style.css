@@ -1,0 +1,728 @@
+:root {
+  --blue: #bde0fe;
+  --pink: #ffafcc;
+  --white: #ffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Full height */
+}
+
+body {
+  font-family: "Fuzzy Bubbles", sans-serif;
+  line-height: 1.45;
+  background: var(--blue);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: 0; /* Firefox */
+}
+
+.example {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+#clickMe {
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border-radius: 5rem;
+  font-family: "Fuzzy Bubbles", sans-serif;
+  transition: 0.3s ease;
+  border: 1px solid #000;
+}
+#clickMe:hover {
+  background-color: black;
+  color: var(--white);
+  cursor: pointer;
+}
+
+#clickMeAgain {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border-radius: 5rem;
+  font-family: "Fuzzy Bubbles", sans-serif;
+  border: none;
+  color: var(--white);
+  background: linear-gradient(125deg, #9ed2ff, #c8b6ff);
+  cursor: pointer;
+}
+#clickMeAgain:hover {
+  color: var(--white);
+  background: #e7c6ff;
+}
+
+.main {
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  background: var(--blue);
+  height: 250dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  position: relative;
+  overflow: hidden;
+}
+
+.blank {
+  min-height: 100dvh;
+  background-color: #f0f0f0;
+  font-size: 10rem;
+  padding-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue {
+  width: 100%;
+  height: 100dvh;
+  background: var(--blue);
+  position: relative;
+  overflow: hidden;
+}
+
+.textContainer {
+  padding-top: 15rem;
+  position: inherit;
+  z-index: 1000;
+  text-align: center;
+}
+
+.name {
+  color: var(--pink);
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.greeting {
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.name,
+.greeting {
+  text-shadow: 1px 5px 4px #00000042;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.cloud {
+  position: absolute;
+}
+.cloud1 {
+  width: 150%;
+  bottom: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.cloud1 > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.cloud2 {
+  /* display: none; */
+  width: 100%;
+  bottom: -5%;
+  transform: translateX(-50%);
+}
+.cloud2 > img {
+  width: 100%;
+  object-fit: cover;
+}
+.cloud5 {
+  /* display: none; */
+  width: 100%;
+  bottom: -5%;
+  transform: translateX(50%);
+}
+.cloud5 > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.cloud3 {
+  width: 20rem;
+  top: 10rem;
+  right: 0;
+}
+.cloud3 > img {
+  width: 100%;
+}
+.cloud4 {
+  bottom: 30%;
+  width: 100%;
+  transform: translateX(-50%);
+}
+.cloud4 > img {
+  width: 100%;
+}
+
+.balloon {
+  position: absolute;
+}
+.balloon > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.balloon1 {
+  left: 0;
+  width: 5rem;
+  z-index: 1;
+}
+.balloon2 {
+  width: 5rem;
+  right: 10rem;
+  top: 5rem;
+}
+.balloon3 {
+  width: 9rem;
+  right: 0rem;
+}
+.balloon4,
+.balloon5,
+.balloon6,
+.balloon7 {
+  display: none;
+}
+
+.balloon6 {
+  display: block;
+  width: 12rem;
+  top: 0%;
+  left: 10%;
+}
+
+/* .balloon5 {
+  display: block;
+  width: 12rem;
+  top: 50%;
+  left: 20%;
+} */
+
+.cake {
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.cake > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card {
+  border-radius: 1rem;
+  margin-inline: 2.5rem;
+  padding-block: 1.8rem;
+  padding-inline: 1.5rem;
+  box-shadow: 1px 3px 20px #0000001a;
+  background: linear-gradient(55deg, #9ed2ff, #b8c0ff);
+  position: inherit;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(20%);
+  width: 6rem;
+  padding-top: 6rem;
+  background-image: url("images/dino-daisy.png");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.message {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: var(--white);
+  text-shadow: 1px 1px 10px #000000e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+}
+
+span {
+  font-size: 1.2rem;
+}
+
+.bodycloud {
+  position: absolute;
+  z-index: 1000;
+}
+
+.bodycloud > img {
+  width: 100%;
+  object-fit: cover;
+}
+.bodycloud1 {
+  width: 100%;
+  top: 33%;
+}
+.bodycloud2 {
+  width: 100%;
+  top: 33%;
+  transform: translateX(-50%);
+}
+.bodycloud3 {
+  width: 100%;
+  top: 33%;
+  transform: translateX(50%);
+}
+.bodycloud4 {
+  width: 100%;
+  top: 33%;
+  transform: translateX(-50%);
+}
+.bodycloud5 {
+  width: 100%;
+  top: 33%;
+  transform: translateX(50%);
+}
+.bodycloud6 {
+  width: 100%;
+  top: 33%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bodycloud7 {
+  width: 100%;
+  top: 33%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bodycloud8 {
+  width: 50%;
+  top: 15%;
+}
+.bodycloud9 {
+  width: 100%;
+  top: 20%;
+  right: -30%;
+}
+.bodycloud10 {
+  width: 50%;
+  top: 50%;
+  left: 10%;
+}
+
+.bodycloud11 {
+  width: 100%;
+  bottom: 5%;
+  left: -10%;
+}
+.bodycloud12 {
+  width: 100%;
+  bottom: -3%;
+  right: -20%;
+}
+
+.lower {
+  background-color: var(--blue);
+  height: 100vh;
+  display: flex;
+  align-items: end;
+  position: relative;
+}
+
+.lowercloud {
+  position: absolute;
+}
+
+.lowercloud > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.lowercloud1,
+.lowercloud2,
+.lowercloud3,
+.lowercloud4 {
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.lowercloud3,
+.lowercloud4 {
+  bottom: -10%;
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .cake {
+    width: 50%;
+    bottom: -35%;
+  }
+
+  .cloud1 {
+    width: 100%;
+    bottom: 0%;
+    top: 45%;
+    z-index: 1;
+  }
+
+  .cloud2 {
+    display: block;
+    transform: translateX(-50%);
+    width: 100%;
+    top: 40%;
+  }
+
+  .cloud5 {
+    display: block;
+    transform: translateX(50%);
+    width: 100%;
+    top: 40%;
+  }
+
+  .cloud3 {
+    width: 20%;
+    top: 10%;
+    right: 10%;
+  }
+  .cloud4 {
+    bottom: 30%;
+    width: 50%;
+    transform: translateX(0%);
+  }
+
+  .balloon1 {
+    left: 10%;
+    width: 18rem;
+    z-index: 1;
+    top: 50%;
+  }
+  .balloon2 {
+    width: 5rem;
+    right: 15%;
+    top: 5rem;
+  }
+  .balloon3 {
+    width: 8rem;
+    right: 10%;
+    bottom: 30%;
+  }
+
+  .balloon4,
+  .balloon5,
+  .balloon6,
+  .balloon7 {
+    display: block;
+  }
+
+  .balloon4 {
+    left: 20%;
+    top: 5%;
+    width: 10rem;
+    z-index: 1;
+  }
+  .balloon5 {
+    width: 12rem;
+    right: 35%;
+    top: 5rem;
+  }
+  .balloon6 {
+    width: 15rem;
+    top: 70%;
+    left: 70%;
+    z-index: 1;
+  }
+  .balloon7 {
+    left: 0%;
+    top: 25%;
+    width: 7rem;
+    z-index: 1;
+  }
+
+  .card {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-block: 5rem;
+    padding-inline: 5rem;
+  }
+
+  .card::after {
+    width: 12rem;
+    padding-top: 12rem;
+    transform: translateY(40%);
+  }
+
+  .bodycloud1,
+  .bodycloud2,
+  .bodycloud3,
+  .bodycloud4,
+  .bodycloud5,
+  .bodycloud6,
+  .bodycloud7 {
+    top: 20%;
+  }
+
+  .bodycloud8,
+  .bodycloud9,
+  .bodycloud10,
+  .bodycloud11,
+  .bodycloud12 {
+    display: block;
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .bodycloud8 {
+    left: 20%;
+    top: 30%;
+  }
+  .bodycloud9 {
+    top: 30%;
+    left: 80%;
+  }
+  .bodycloud10 {
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .bodycloud11 {
+    left: 40%;
+  }
+  .bodycloud12 {
+    left: 70%;
+  }
+
+  .lowercloud1,
+  .lowercloud2 {
+    bottom: -50%;
+  }
+
+  .lowercloud3,
+  .lowercloud4 {
+    bottom: -70%;
+  }
+
+  #clickMeAgain {
+    margin-top: 20rem;
+  }
+
+  .message {
+    font-size: 1.8rem;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cake {
+    width: 50%;
+    bottom: -35%;
+  }
+
+  .cloud1 {
+    width: 100%;
+    bottom: 0%;
+    top: 45%;
+    z-index: 1;
+  }
+
+  .cloud2 {
+    display: block;
+    transform: translateX(-50%);
+    width: 100%;
+    top: 40%;
+  }
+
+  .cloud5 {
+    display: block;
+    transform: translateX(50%);
+    width: 100%;
+    top: 40%;
+  }
+
+  .cloud3 {
+    width: 20%;
+    top: 10%;
+    right: 10%;
+  }
+  .cloud4 {
+    bottom: 30%;
+    width: 50%;
+    transform: translateX(0%);
+  }
+
+  .name {
+    color: var(--pink);
+    font-size: 8rem;
+    font-weight: bold;
+  }
+
+  .greeting {
+    font-size: 4rem;
+    color: var(--white);
+  }
+
+  .bodycloud1,
+  .bodycloud2,
+  .bodycloud3,
+  .bodycloud4,
+  .bodycloud5,
+  .bodycloud6,
+  .bodycloud7 {
+    top: 25%;
+  }
+
+  .bodycloud8 {
+    left: 20%;
+    top: 40%;
+  }
+  .bodycloud9 {
+    top: 40%;
+    left: 80%;
+  }
+  .bodycloud10 {
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #clickMeAgain {
+    margin-top: 30rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cake {
+    max-width: 40%;
+    bottom: -35%;
+  }
+
+  .cloud1 {
+    width: 100%;
+    bottom: 0%;
+    top: 35%;
+    z-index: 1;
+  }
+
+  .cloud2 {
+    display: block;
+    transform: translateX(-50%);
+    width: 100%;
+    top: 30%;
+  }
+
+  .cloud5 {
+    display: block;
+    transform: translateX(50%);
+    width: 100%;
+    top: 30%;
+  }
+
+  .bodycloud1,
+  .bodycloud2,
+  .bodycloud3,
+  .bodycloud4,
+  .bodycloud5,
+  .bodycloud6,
+  .bodycloud7 {
+    top: 20%;
+  }
+}
+
+@media (800px <= height <= 1000px) and (orientation: portrait) {
+  .textContainer {
+    padding-top: 20rem;
+  }
+
+  .cake {
+    position: absolute;
+    bottom: -12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+}
+
+@media (700px <= height <= 799px) and (orientation: portrait) {
+  .textContainer {
+    padding-top: 10rem;
+  }
+
+  .cake {
+    width: 80%;
+  }
+
+  .card {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (height >= 1000px) and (orientation: portrait) {
+  .textContainer {
+    padding-top: 10rem;
+  }
+
+  .card {
+    margin-bottom: 15rem;
+    margin-inline: auto;
+    max-width: 80rem;
+  }
+}
+
+@media (width < 350px) and (height > 800px) {
+  .bodycloud1 {
+    top: 35%;
+  }
+  .bodycloud2 {
+    top: 35%;
+  }
+  .bodycloud3 {
+    top: 35%;
+  }
+  .bodycloud4 {
+    top: 35%;
+  }
+  .bodycloud5 {
+    top: 35%;
+  }
+  .bodycloud6 {
+    top: 35%;
+  }
+  .bodycloud7 {
+    top: 35%;
+  }
+}
